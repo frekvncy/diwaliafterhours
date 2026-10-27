@@ -216,20 +216,20 @@
       background: rgba(36, 11, 14, 0.72);
       border: 1px solid var(--border-warm);
       backdrop-filter: blur(14px);
-      padding: 10px 22px 10px 12px;
+      padding: 8px 22px 8px 10px;
       border-radius: 999px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 
     .host-avatar {
-      width: 38px;
-      height: 38px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #ff9e44, #e55934);
-      display: grid;
-      place-items: center;
-      font-size: 1.15rem;
-      box-shadow: 0 0 12px rgba(255, 158, 68, 0.6);
+      object-fit: cover;
+      object-position: center 38%;
+      border: 2px solid var(--amber);
+      box-shadow: 0 0 14px rgba(255, 158, 68, 0.65);
+      flex-shrink: 0;
     }
 
     .host-text {
@@ -279,33 +279,95 @@
       color: #fff;
     }
 
-    /* Warm Story Note Card */
+    /* Warm Story Note & Host Spotlight Card */
     .warm-note {
       margin: 28px auto 0;
       background: linear-gradient(135deg, rgba(255, 183, 77, 0.14), rgba(229, 152, 155, 0.12));
-      border: 1px solid rgba(255, 205, 178, 0.32);
+      border: 1px solid rgba(255, 205, 178, 0.35);
       backdrop-filter: blur(16px);
-      border-radius: 24px;
-      padding: 24px 28px;
-      text-align: center;
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 26px;
+      padding: 26px 30px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      text-align: left;
       position: relative;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+    }
+
+    .host-portrait-wrap {
+      flex-shrink: 0;
+      position: relative;
+      width: 195px;
+      aspect-ratio: 3 / 4;
+      border-radius: 20px;
+      padding: 5px;
+      background: linear-gradient(145deg, rgba(255, 183, 77, 0.85), rgba(229, 152, 155, 0.35));
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.42), 0 0 22px rgba(255, 167, 38, 0.22);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .host-portrait-wrap:hover {
+      transform: translateY(-4px) rotate(-1deg);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5), 0 0 28px rgba(255, 183, 77, 0.4);
+    }
+
+    .host-portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 16px;
+      display: block;
+    }
+
+    .host-portrait-badge {
+      position: absolute;
+      bottom: -11px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(36, 11, 14, 0.94);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    .warm-note-content {
+      flex: 1;
+    }
+
+    .warm-note-eyebrow {
+      display: inline-block;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--peach);
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     .warm-note p {
       font-family: 'Fraunces', serif;
-      font-size: 1.15rem;
+      font-size: 1.16rem;
       font-style: italic;
       color: var(--cream);
-      max-width: 680px;
-      margin: 0 auto;
+      line-height: 1.6;
+      margin: 0;
     }
 
     .warm-note .signature {
-      margin-top: 10px;
+      margin-top: 14px;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-style: normal;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--amber);
       font-weight: 600;
       letter-spacing: 0.5px;
@@ -470,7 +532,13 @@
         grid-template-columns: 1fr;
       }
       .warm-note {
-        padding: 20px 18px;
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 22px;
+      }
+      .host-portrait-wrap {
+        width: 180px;
       }
     }
 
@@ -1033,6 +1101,95 @@
       font-size: 0.84rem;
       color: rgba(247, 225, 215, 0.7);
     }
+    /* Registration Announcement Banner */
+    .reg-banner {
+      background: linear-gradient(90deg, rgba(68, 20, 26, 0.92) 0%, rgba(110, 38, 18, 0.95) 50%, rgba(68, 20, 26, 0.92) 100%);
+      border-bottom: 1.5px solid rgba(255, 183, 77, 0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 12px 18px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 24px rgba(255, 143, 0, 0.2);
+    }
+
+    .reg-banner-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      font-size: 0.92rem;
+      color: var(--cream);
+    }
+
+    .reg-live-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 10px #4ade80, 0 0 18px #22c55e;
+      display: inline-block;
+      animation: pulseDot 1.6s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
+    }
+
+    .reg-banner-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .reg-banner-text strong {
+      color: var(--amber);
+      font-weight: 700;
+    }
+
+    .reg-banner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #ffb74d, #ff8f00);
+      color: #240b0e;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-decoration: none;
+      padding: 5px 14px;
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(255, 167, 38, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .reg-banner-cta:hover {
+      transform: translateY(-1px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(255, 167, 38, 0.55);
+    }
+
+    .rsvp-deadline-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 183, 77, 0.16);
+      border: 1px solid rgba(255, 183, 77, 0.5);
+      color: var(--amber);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 18px rgba(255, 143, 0, 0.15);
+    }
   </style>
 </head>
 <body>
@@ -1041,6 +1198,17 @@
   <div class="ambient-orb orb-1"></div>
   <div class="ambient-orb orb-2"></div>
   <div class="ambient-orb orb-3"></div>
+
+  <!-- Top Registration Banner -->
+  <div class="reg-banner" role="region" aria-label="Registration Status Announcement">
+    <div class="reg-banner-inner">
+      <span class="reg-banner-text">
+        <span class="reg-live-dot" aria-hidden="true"></span>
+        🎟️ <strong>Registration opened till Friday (30-Oct-2026)</strong>
+      </span>
+      <a href="#rsvp" class="reg-banner-cta">Lock In Your Pass ✨</a>
+    </div>
+  </div>
 
   <div class="container">
     <header>
@@ -1052,10 +1220,10 @@
       </p>
 
       <div class="host-welcome">
-        <div class="host-avatar">🌸</div>
+        <img src="host-mugdha.jpg" alt="Mugdha Roy — Your Host" class="host-avatar" />
         <div class="host-text">
           <span>Your Host for the Night</span>
-          <strong>Mugdha Roy</strong>
+          <strong>Mugdha Roy 🌸</strong>
         </div>
       </div>
 
@@ -1070,12 +1238,19 @@
       </div>
     </header>
 
-    <!-- Warm Personal Note -->
+    <!-- Warm Personal Note & Host Spotlight -->
     <div class="warm-note">
-      <p>
-        “Diwali feels warmest when you’re surrounded by your new connections, favorite people, good food, fairy lights, and a little bit of friendly card-table rivalry. Come through, bring your energy, and let’s make it a core memory!”
-      </p>
-      <div class="signature">— Love, Mugdha 💛</div>
+      <div class="host-portrait-wrap">
+        <img src="host-mugdha.jpg" alt="Mugdha Roy — Host of Diwali Bash '26" class="host-portrait" />
+        <span class="host-portrait-badge">✨ Your Host</span>
+      </div>
+      <div class="warm-note-content">
+        <span class="warm-note-eyebrow">A Note From Your Host</span>
+        <p>
+          “Diwali feels warmest when you’re surrounded by your new connections, favorite people, good food, fairy lights, and a little bit of friendly card-table rivalry. Come through, bring your energy, and let’s make it a core memory!”
+        </p>
+        <div class="signature">— Love, Mugdha Roy 💛🌸</div>
+      </div>
     </div>
 
     <!-- Key Details -->
@@ -1207,6 +1382,10 @@
 
     <!-- Interactive RSVP & GPay UPI Section -->
     <div class="rsvp-box" id="rsvp">
+      <div class="rsvp-deadline-banner">
+        <span class="reg-live-dot" aria-hidden="true"></span>
+        ⏳ Registration opened till Friday (30-Oct-2026)
+      </div>
       <h2>Lock In Your Spot ✨</h2>
       <p>Pick your vibe, scan or tap to pay via GPay/UPI, and drop your payment screenshot on WhatsApp so we save your plate (and seat at the card table)!</p>
 
