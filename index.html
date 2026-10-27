@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lights, Chaos & Good Vibes ✨ | Mugdha's Diwali Bash '26</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --amber: #ffb74d;
+      --marigold: #ff8f00;
+      --peach: #ffcdb2;
+      --rose-warm: #e5989b;
+      --cream: #fffaf4;
+      --cream-soft: #f7e1d7;
+      --warm-bg: #240b0e;
+      --card-glass: rgba(48, 17, 20, 0.62);
+      --card-glass-hover: rgba(68, 24, 28, 0.78);
+      --border-warm: rgba(255, 195, 130, 0.28);
+      --border-glow: rgba(255, 183, 77, 0.65);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--cream);
+      background-color: var(--warm-bg);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    /* Warm, dreamy background image with layered cozy sunset overlay */
+    .bg-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(
+          180deg,
+          rgba(36, 11, 14, 0.55) 0%,
+          rgba(54, 16, 18, 0.72) 45%,
+          rgba(32, 9, 12, 0.90) 100%
+        ),
+        radial-gradient(circle at 50% 20%, rgba(255, 152, 67, 0.28), transparent 65%),
+        url('diwali-bg.jpg'),
+        url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1920&q=85');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      transform: scale(1.03);
+      filter: saturate(1.15);
+    }
+
+    /* Soft floating golden bokeh orbs */
+    .ambient-orb {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(65px);
+      opacity: 0.55;
+      animation: floatOrb 12s ease-in-out infinite alternate;
+    }
+
+    .orb-1 {
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(255, 167, 38, 0.45), transparent 70%);
+      top: -100px;
+      left: -80px;
+    }
+
+    .orb-2 {
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(255, 112, 67, 0.4), transparent 70%);
+      bottom: -80px;
+      right: -60px;
+      animation-delay: -5s;
+    }
+
+    .orb-3 {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(255, 213, 79, 0.3), transparent 70%);
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: -3s;
+    }
+
+    @keyframes floatOrb {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(28px) scale(1.08); }
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 18px 90px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Hero Section */
+    header {
+      text-align: center;
+      padding: 44px 16px 28px;
+      position: relative;
+    }
+
+    .vibe-pill-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 183, 77, 0.16);
+      border: 1px solid rgba(255, 205, 178, 0.38);
+      backdrop-filter: blur(10px);
+      padding: 7px 18px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--peach);
+      margin-bottom: 18px;
+      box-shadow: 0 4px 20px rgba(255, 143, 0, 0.18);
+      animation: gentleBob 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes gentleBob {
+      from { transform: translateY(0); }
+      to { transform: translateY(-4px); }
+    }
+
+    .diya-cluster {
+      font-size: 2.8rem;
+      margin-bottom: 6px;
+      display: inline-block;
+      filter: drop-shadow(0 0 18px rgba(255, 179, 0, 0.85));
+      animation: glowPulse 2.4s infinite alternate ease-in-out;
+    }
+
+    @keyframes glowPulse {
+      0% { transform: scale(0.98) rotate(-2deg); filter: drop-shadow(0 0 14px #ffb300); }
+      100% { transform: scale(1.06) rotate(2deg); filter: drop-shadow(0 0 28px #ff6f00); }
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.5rem, 6vw, 4.1rem);
+      font-weight: 700;
+      line-height: 1.08;
+      margin: 8px 0 16px;
+      background: linear-gradient(135deg, #fffdf9 0%, #ffe0a3 45%, #ffab40 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    h1 em {
+      font-style: italic;
+      font-weight: 500;
+      background: linear-gradient(135deg, #ffcdb2, #ffb74d);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub {
+      max-width: 580px;
+      margin: 0 auto 24px;
+      font-size: 1.06rem;
+      color: var(--cream-soft);
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    /* Host Warm Note / Invite Badge */
+    .host-welcome {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(36, 11, 14, 0.72);
+      border: 1px solid var(--border-warm);
+      backdrop-filter: blur(14px);
+      padding: 10px 22px 10px 12px;
+      border-radius: 999px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .host-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff9e44, #e55934);
+      display: grid;
+      place-items: center;
+      font-size: 1.15rem;
+      box-shadow: 0 0 12px rgba(255, 158, 68, 0.6);
+    }
+
+    .host-text {
+      text-align: left;
+      font-size: 0.88rem;
+      line-height: 1.3;
+    }
+
+    .host-text span {
+      display: block;
+      color: var(--peach);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .host-text strong {
+      color: var(--cream);
+      font-size: 0.96rem;
+    }
+
+    /* Vibe Check Marquee / Tags */
+    .vibe-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 26px auto 10px;
+      max-width: 720px;
+    }
+
+    .vibe-tag {
+      background: rgba(255, 250, 244, 0.08);
+      border: 1px solid rgba(255, 205, 178, 0.22);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      color: var(--cream-soft);
+      transition: all 0.25s ease;
+    }
+
+    .vibe-tag:hover {
+      background: rgba(255, 183, 77, 0.22);
+      border-color: var(--amber);
+      transform: translateY(-2px) rotate(-1deg);
+      color: #fff;
+    }
+
+    /* Warm Story Note Card */
+    .warm-note {
+      margin: 28px auto 0;
+      background: linear-gradient(135deg, rgba(255, 183, 77, 0.14), rgba(229, 152, 155, 0.12));
+      border: 1px solid rgba(255, 205, 178, 0.32);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 24px 28px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .warm-note p {
+      font-family: 'Fraunces', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--cream);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .warm-note .signature {
+      margin-top: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-style: normal;
+      font-size: 0.85rem;
+      color: var(--amber);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Quick Details Bento Grid */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 640px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--card-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-warm);
+      border-radius: 22px;
+      padding: 24px 20px;
+      text-align: left;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-glow);
+      background: var(--card-glass-hover);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .card-icon {
+      font-size: 1.75rem;
+      background: rgba(255, 183, 77, 0.15);
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 183, 77, 0.25);
+    }
+
+    .card-badge {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: rgba(255, 205, 178, 0.14);
+      color: var(--peach);
+      font-weight: 600;
+    }
+
+    .card h3 {
+      font-family: 'Fraunces', serif;
+      color: var(--amber);
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 0.94rem;
+      color: var(--cream-soft);
+      line-height: 1.5;
+    }
+
+    .card p strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .card a {
+      color: var(--amber);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .card a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 11px;
+      border-radius: 10px;
+      background: rgba(255, 183, 77, 0.1);
+      border: 1px solid rgba(255, 205, 178, 0.22);
+      color: var(--cream) !important;
+      font-size: 0.85rem;
+      font-weight: 500 !important;
+      text-decoration: none !important;
+      width: fit-content;
+      max-width: 100%;
+      word-break: break-all;
+      transition: all 0.22s ease;
+    }
+
+    .contact-link span {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .contact-link:hover {
+      background: rgba(255, 183, 77, 0.24);
+      border-color: var(--amber);
+      color: #fff !important;
+      transform: translateX(3px);
+      box-shadow: 0 4px 14px rgba(255, 167, 38, 0.2);
+    }
+
+    .map-embed {
+      margin-top: 12px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 205, 178, 0.25);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .map-embed iframe {
+      display: block;
+      width: 100%;
+      height: 180px;
+      border: 0;
+    }
+
+    /* Callout Highlights: Contribution & BYOB */
+    .callout-banner {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .callout-banner {
+        grid-template-columns: 1fr;
+      }
+      .warm-note {
+        padding: 20px 18px;
+      }
+    }
+
+    .highlight-card {
+      background: linear-gradient(145deg, rgba(82, 23, 30, 0.78), rgba(38, 11, 15, 0.85));
+      backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(255, 183, 77, 0.45);
+      border-radius: 22px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(255, 152, 0, 0.18);
+    }
+
+    .highlight-emoji {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+      background: rgba(255, 183, 77, 0.14);
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 183, 77, 0.3);
+    }
+
+    .highlight-info .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 0.75rem;
+      color: var(--peach);
+      font-weight: 700;
+    }
+
+    .price-tag, .byob-tag {
+      font-family: 'Fraunces', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--amber);
+      line-height: 1.15;
+      margin: 2px 0 4px;
+    }
+
+    .byob-tag {
+      color: #ffd166;
+    }
+
+    .highlight-sub {
+      font-size: 0.86rem;
+      color: var(--cream-soft);
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      margin: 56px 0 26px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--amber);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.75rem, 4vw, 2.3rem);
+      color: var(--cream);
+    }
+
+    /* Shenanigans / Games Grid */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      gap: 18px;
+    }
+
+    .game-card {
+      background: var(--card-glass);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border-warm);
+      border-radius: 20px;
+      padding: 22px;
+      position: relative;
+      transition: all 0.28s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px) scale(1.01);
+      border-color: var(--amber);
+      background: var(--card-glass-hover);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .game-mood {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 99px;
+      background: rgba(255, 183, 77, 0.16);
+      color: var(--amber);
+    }
+
+    .game-card h4 {
+      font-family: 'Fraunces', serif;
+      color: var(--cream);
+      font-size: 1.16rem;
+      margin-top: 2px;
+    }
+
+    .game-card p {
+      font-size: 0.9rem;
+      color: var(--cream-soft);
+      line-height: 1.55;
+    }
+
+    /* Interactive Vibe Selector + RSVP Box */
+    .rsvp-box {
+      margin-top: 52px;
+      background: linear-gradient(145deg, rgba(68, 18, 25, 0.88), rgba(32, 8, 12, 0.92));
+      backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(255, 183, 77, 0.55);
+      border-radius: 28px;
+      padding: 40px 26px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 167, 38, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rsvp-box h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .rsvp-box > p {
+      color: var(--cream-soft);
+      max-width: 520px;
+      margin: 0 auto 22px;
+      font-size: 0.98rem;
+    }
+
+    .vibe-picker-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--peach);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .vibe-Check-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .vibe-chip {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 205, 178, 0.3);
+      color: var(--cream-soft);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .vibe-chip:hover {
+      background: rgba(255, 183, 77, 0.2);
+      color: #fff;
+    }
+
+    .vibe-chip.active {
+      background: linear-gradient(135deg, #ffb74d, #ff8f00);
+      color: #240b0e;
+      border-color: transparent;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(255, 167, 38, 0.45);
+      transform: scale(1.04);
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.08rem;
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 999px;
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.38);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 14px 34px rgba(37, 211, 102, 0.55);
+    }
+
+    /* Payment & Screenshot Section */
+    .payment-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 28px;
+      margin: 28px 0 32px;
+      text-align: left;
+      align-items: center;
+      background: rgba(20, 5, 8, 0.55);
+      border: 1px solid rgba(255, 195, 130, 0.28);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    @media (max-width: 720px) {
+      .payment-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px 16px;
+      }
+    }
+
+    .qr-wrapper {
+      background: #ffffff;
+      padding: 14px;
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 24px rgba(255, 183, 77, 0.25);
+      text-align: center;
+      max-width: 270px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .qr-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .qr-caption {
+      margin-top: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #3c4043;
+      letter-spacing: 0.3px;
+    }
+
+    .payment-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--amber);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .payment-steps h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.45rem;
+      color: var(--cream);
+      line-height: 1.25;
+    }
+
+    /* Guest Counter Pills */
+    .pass-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 720px) {
+      .pass-selector {
+        justify-content: center;
+      }
+    }
+
+    .pass-btn {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 205, 178, 0.3);
+      color: var(--cream-soft);
+      padding: 7px 14px;
+      border-radius: 99px;
+      font-size: 0.84rem;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .pass-btn.active {
+      background: rgba(255, 183, 77, 0.25);
+      border-color: var(--amber);
+      color: #fff;
+      box-shadow: 0 0 14px rgba(255, 183, 77, 0.3);
+    }
+
+    /* UPI ID Copy Bar */
+    .upi-copy-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(255, 250, 244, 0.08);
+      border: 1px dashed rgba(255, 183, 77, 0.5);
+      padding: 10px 14px;
+      border-radius: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .upi-copy-box {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    .upi-id-text {
+      font-size: 0.92rem;
+      color: var(--cream);
+      font-family: monospace;
+      letter-spacing: 0.3px;
+      user-select: all;
+    }
+
+    .upi-id-text span {
+      color: var(--peach);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.78rem;
+      margin-right: 6px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .btn-copy-upi {
+      background: rgba(255, 183, 77, 0.2);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+
+    .btn-copy-upi:hover {
+      background: var(--amber);
+      color: #240b0e;
+    }
+
+    .upi-action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .upi-action-row {
+        justify-content: center;
+      }
+    }
+
+    .btn-gpay {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
+      color: #1f1f1f;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-gpay:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+    }
+
+    .gpay-badge {
+      background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    /* Screenshot Upload & WhatsApp Proof Box */
+    .screenshot-proof-card {
+      background: rgba(255, 183, 77, 0.09);
+      border: 1.5px dashed rgba(255, 183, 77, 0.45);
+      border-radius: 18px;
+      padding: 16px 18px;
+      text-align: left;
+    }
+
+    @media (max-width: 720px) {
+      .screenshot-proof-card {
+        text-align: center;
+      }
+    }
+
+    .screenshot-proof-card h4 {
+      font-size: 0.98rem;
+      color: var(--cream);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .screenshot-proof-card h4 {
+        justify-content: center;
+      }
+    }
+
+    .screenshot-proof-card p {
+      font-size: 0.84rem;
+      color: var(--cream-soft);
+      margin-bottom: 12px;
+    }
+
+    .proof-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    @media (max-width: 720px) {
+      .proof-controls {
+        justify-content: center;
+      }
+    }
+
+    .file-upload-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 205, 178, 0.35);
+      color: var(--cream);
+      padding: 9px 16px;
+      border-radius: 99px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .file-upload-label:hover {
+      background: rgba(255, 183, 77, 0.22);
+      border-color: var(--amber);
+    }
+
+    #screenshotInput {
+      display: none;
+    }
+
+    .screenshot-preview {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      background: rgba(37, 211, 102, 0.14);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      padding: 8px 12px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      color: #b9f6ca;
+    }
+
+    .screenshot-preview.visible {
+      display: inline-flex;
+    }
+
+    .screenshot-preview img {
+      width: 38px;
+      height: 38px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .whatsapp-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .whatsapp-hint {
+      font-size: 0.8rem;
+      color: var(--peach);
+      opacity: 0.9;
+    }
+
+    .host-contact {
+      margin-top: 22px;
+      font-size: 0.9rem;
+      color: var(--peach);
+    }
+
+    .host-contact a {
+      color: var(--amber);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .host-contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 44px;
+      font-size: 0.84rem;
+      color: rgba(247, 225, 215, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Image & Warm Ambient Glows -->
+  <div class="bg-backdrop"></div>
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="ambient-orb orb-3"></div>
+
+  <div class="container">
+    <header>
+      <div class="vibe-pill-top">✨ Official Vibe Check • Diwali '26</div>
+      <div><span class="diya-cluster">🪔✨🥂</span></div>
+      <h1>Lights, New Connections &amp; <em>Good Vibes</em></h1>
+      <p class="hero-sub">
+        Skip the awkward small talk. We’re taking over a whole villa for a night of glowing diyas, unhinged card tables, cozy lawn conversations, and main-character fits.
+      </p>
+
+      <div class="host-welcome">
+        <div class="host-avatar">🌸</div>
+        <div class="host-text">
+          <span>Your Host for the Night</span>
+          <strong>Mugdha Roy</strong>
+        </div>
+      </div>
+
+      <div class="vibe-tags">
+        <span class="vibe-tag">👗 Ethnic / Indo-Western Drip</span>
+        <span class="vibe-tag">🏊‍♂️ Pool Dip (Pack Extra Pair!)</span>
+        <span class="vibe-tag">🃏 High-Chaos Teen Patti</span>
+        <span class="vibe-tag">📸 Golden Hour Sparklers</span>
+        <span class="vibe-tag">🎶 2000s Bollywood Bangers</span>
+        <span class="vibe-tag">🎶 House Music</span>
+        <span class="vibe-tag">🌙 Night Ethnic Photoshoot</span>
+      </div>
+    </header>
+
+    <!-- Warm Personal Note -->
+    <div class="warm-note">
+      <p>
+        “Diwali feels warmest when you’re surrounded by your new connections, favorite people, good food, fairy lights, and a little bit of friendly card-table rivalry. Come through, bring your energy, and let’s make it a core memory!”
+      </p>
+      <div class="signature">— Love, Mugdha 💛</div>
+    </div>
+
+    <!-- Key Details -->
+    <div class="info-grid">
+      <div class="card">
+        <div class="card-top">
+          <div class="card-icon">🗓️</div>
+          <span class="card-badge">Save the Date</span>
+        </div>
+        <h3>When We Roll In</h3>
+        <p><strong>Monday, 05 October 2026 • 05:00 PM</strong><br>Golden hour &amp; evening onwards till late night</p>
+        <div class="contact-links" style="margin-top: 12px;">
+          <a class="contact-link" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Mugdha's+Diwali+'26+Villa+Bash+%F0%9F%AA%94%E2%9C%A8&amp;dates=20261005T170000/20261005T235900&amp;ctz=Asia/Kolkata&amp;location=Sparrow+Villa+%26+Resort,+Sisendi+Road,+Mohanlalganj,+Lucknow&amp;details=Lights,+New+Connections+%26+Good+Vibes!+Hosted+by+Mugdha+Roy.+Dress+Code:+Ethnic+/+Indo-Western+Wear+(plus+extra+clothes/swimwear+for+the+pool!).+BYOB." target="_blank" rel="noopener noreferrer" title="Save event in Google Calendar">
+            <span>📅</span> Save in Google Calendar
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div class="card-icon">🏡</div>
+          <span class="card-badge">Private Escape</span>
+        </div>
+        <h3>The Spot</h3>
+        <p><strong>Sparrow Villa &amp; Resort</strong><br>Sisendi Road, Mohanlalganj, Lucknow</p>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.2824468675476!2d80.99215459999999!3d26.6073919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bf1746a751541%3A0x3a5cbf44eb050d1e!2sSparrow%20Farms%20And%20Resort!5e0!3m2!1sen!2sin!4v1793109623554!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div class="card-icon">👗</div>
+          <span class="card-badge">Dress Code</span>
+        </div>
+        <h3>The Fit &amp; Pool Prep</h3>
+        <p>
+          <strong>To Wear: Ethnic Wear ✨</strong><br>
+          Pull up in your best traditional or Indo-Western festive fit for golden hour sparklers &amp; the night photoshoot.<br><br>
+          <strong>🏊‍♂️ Packing Tip:</strong> Bring an <strong>extra pair of clothes / swimwear</strong> if you want to jump in the pool for a swim!
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div class="card-icon">💌</div>
+          <span class="card-badge">Hit Me Up</span>
+        </div>
+        <h3>Got Questions?</h3>
+        <p><strong>Mugdha Roy</strong></p>
+        <div class="contact-links">
+          <a class="contact-link" href="tel:+916397056448" title="Call or text Mugdha">
+            <span>📞</span> +91 63970 56448
+          </a>
+          <a class="contact-link" href="mailto:mugdharoy2291@gmail.com?subject=Diwali%20Bash%20'26%20Query" title="Email mugdharoy2291@gmail.com">
+            <span>✉️</span> mugdharoy2291@gmail.com
+          </a>
+          <a class="contact-link" href="mailto:frekvncy@gmail.com?subject=Diwali%20Bash%20'26%20Query" title="Email frekvncy@gmail.com">
+            <span>✉️</span> frekvncy@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contribution & BYOB -->
+    <div class="callout-banner">
+      <div class="highlight-card">
+        <div class="highlight-emoji">🎟️</div>
+        <div class="highlight-info">
+          <div class="eyebrow">The Damage (All-In)</div>
+          <div class="price-tag">₹800 / person</div>
+          <div class="highlight-sub">Covers full feast, mixers &amp; private villa access</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-emoji">🥂</div>
+        <div class="highlight-info">
+          <div class="eyebrow">Pour Decisions</div>
+          <div class="byob-tag">B.Y.O.B.</div>
+          <div class="highlight-sub">Bring your favorite bottle, poison, or mocktail stash!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lineup / Games Section -->
+    <div class="section-header">
+      <span class="section-eyebrow">What’s Going Down</span>
+      <h2 class="section-title">Plot Twists &amp; Party Shenanigans</h2>
+    </div>
+
+    <div class="games-grid">
+      <div class="game-card">
+        <span class="game-mood">High Stakes • Zero Chill</span>
+        <h4>🃏 Chaotic Good Teen Patti</h4>
+        <p>Blind plays, dramatic bluffs, and Muflis rounds. Bring your best poker face—or just vibes and beginner’s luck.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="game-mood">Loud &amp; Competitive</span>
+        <h4>🎶 Plot-Twist Bollywood Tambola</h4>
+        <p>Definitely not your auntie’s Tambola. Music cues, spicy dares for bogeys, and bragging rights on the line.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="game-mood">2 AM Energy</span>
+        <h4>🎭 Unhinged Charades &amp; Antakshari</h4>
+        <p>Iconic 2000s Bollywood bangers, dramatic acting, and losing our voices together under the fairy lights.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="game-mood">60-Second Rush</span>
+        <h4>🔥 Rapid-Fire Diya Relay</h4>
+        <p>Race the clock to light the most terracotta diyas before the breeze humbles you. Cozy chaos guaranteed.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="game-mood">Cozy Corner</span>
+        <h4>🎲 Uno No-Mercy &amp; Chill Lounge</h4>
+        <p>Need a breather from the dance floor? Pull up a floor cushion for Draw-4 betrayals and deep 1 AM chats.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="game-mood">For The Dump 📸</span>
+        <h4>✨ Phooljhadi &amp; Fit-Check Hour</h4>
+        <p>Sparkler trails, warm golden lighting, and candid photo dumps so your Diwali outfit gets the hype it deserves.</p>
+      </div>
+    </div>
+
+    <!-- Interactive RSVP & GPay UPI Section -->
+    <div class="rsvp-box" id="rsvp">
+      <h2>Lock In Your Spot ✨</h2>
+      <p>Pick your vibe, scan or tap to pay via GPay/UPI, and drop your payment screenshot on WhatsApp so we save your plate (and seat at the card table)!</p>
+
+      <div class="vibe-picker-label">Step 1 • Pick your main energy for the night:</div>
+      <div class="vibe-Check-chips" id="vibeChips">
+        <button type="button" class="vibe-chip active" data-vibe="winning the Teen Patti table 🃏">🃏 Winning Teen Patti</button>
+        <button type="button" class="vibe-chip" data-vibe="serving ethnic fit checks & sparkler photos ✨">✨ Fit Check &amp; Sparklers</button>
+        <button type="button" class="vibe-chip" data-vibe="good food, cozy vibes & 2AM Antakshari 🎶">🎶 Cozy Vibes &amp; Music</button>
+        <button type="button" class="vibe-chip" data-vibe="pure chaos & BYOB cheers 🥂">🥂 BYOB &amp; Pure Chaos</button>
+      </div>
+
+      <!-- GPay QR & UPI Payment Card -->
+      <div class="payment-grid">
+        <div class="qr-wrapper">
+          <img src="gpay-qr.jpg?v=2" alt="Mugdha Roy GPay UPI QR Code - ₹800 - mugdharoy2291@oksbi" />
+          <div class="qr-caption">₹800 Pre-filled • Scan with any UPI App</div>
+        </div>
+
+        <div class="payment-steps">
+          <div>
+            <span class="step-badge">⚡ Step 2 • GPay / UPI Contribution</span>
+            <h3>Pay ₹<span id="amountDisplay">800</span> to Mugdha Roy</h3>
+            <div class="pass-selector" id="passSelector">
+              <button type="button" class="pass-btn active" data-guests="1" data-amount="800">1 Pass • ₹800</button>
+              <button type="button" class="pass-btn" data-guests="2" data-amount="1600">2 Passes • ₹1,600</button>
+              <button type="button" class="pass-btn" data-guests="3" data-amount="2400">3 Passes • ₹2,400</button>
+            </div>
+          </div>
+
+          <div class="upi-copy-box">
+            <div class="upi-id-text">
+              <span>UPI ID:</span>mugdharoy2291@oksbi
+            </div>
+            <button type="button" class="btn-copy-upi" id="copyUpiBtn">📋 Copy UPI ID</button>
+          </div>
+
+          <div class="upi-action-row">
+            <a
+              id="upiPayLink"
+              class="btn-gpay"
+              href="upi://pay?pa=mugdharoy2291@oksbi&pn=Mugdha%20Roy&am=800&cu=INR&tn=Diwali%20Bash%202026"
+            >
+              <span>📲</span> Pay ₹<span id="btnAmountText">800</span> with <span class="gpay-badge">GPay</span> / UPI App
+            </a>
+          </div>
+
+          <!-- Screenshot Attachment & WhatsApp Step -->
+          <div class="screenshot-proof-card">
+            <h4>📸 Step 3 • Send Payment Screenshot on WhatsApp</h4>
+            <p>Once paid, attach your GPay screenshot below (or paste it directly inside the WhatsApp chat) to confirm your pass!</p>
+
+            <div class="proof-controls">
+              <label for="screenshotInput" class="file-upload-label">
+                <span>🖼️</span> Attach Payment Screenshot
+              </label>
+              <input type="file" id="screenshotInput" accept="image/*" />
+            </div>
+
+            <div class="screenshot-preview" id="screenshotPreview">
+              <img id="previewThumb" src="" alt="Payment Screenshot Preview" />
+              <span id="previewText">Screenshot attached &amp; ready to share! ✅</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="whatsapp-actions">
+        <a
+          id="whatsappBtn"
+          class="btn-whatsapp"
+          href="https://wa.me/916397056448?text=Hey%20Mugdha!%20%E2%9C%A8%20I've%20just%20paid%20%E2%82%B9800%20(1%20Pass)%20via%20UPI%20for%20the%20Diwali%20Bash%20at%20Sparrow%20Villa%20on%205th%20Oct!%20I'm%20pulling%20up%20for%20winning%20the%20Teen%20Patti%20table%20%F0%9F%83%8F.%20Sharing%20my%20payment%20screenshot%20right%20here%20%F0%9F%93%B8%F0%9F%AA%94"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>💬</span> Send Payment Screenshot &amp; RSVP on WhatsApp
+        </a>
+        <span class="whatsapp-hint" id="whatsappHint">
+          💡 Clicking above opens WhatsApp with your details pre-filled—just attach your payment screenshot in the chat!
+        </span>
+      </div>
+
+      <div class="host-contact">
+        Hosted with love by <strong>Mugdha Roy</strong> &bull; <a href="tel:+916397056448">+91 6397056448</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with warmth &amp; sparkle ✨ &bull; Sparrow Villa &amp; Resort, Lucknow &bull; Diwali 2026</p>
+    </footer>
+  </div>
+
+  <script>
+    const chips = document.querySelectorAll('.vibe-chip');
+    const passBtns = document.querySelectorAll('.pass-btn');
+    const whatsappBtn = document.getElementById('whatsappBtn');
+    const whatsappHint = document.getElementById('whatsappHint');
+    const upiPayLink = document.getElementById('upiPayLink');
+    const amountDisplay = document.getElementById('amountDisplay');
+    const btnAmountText = document.getElementById('btnAmountText');
+    const copyUpiBtn = document.getElementById('copyUpiBtn');
+    const screenshotInput = document.getElementById('screenshotInput');
+    const screenshotPreview = document.getElementById('screenshotPreview');
+    const previewThumb = document.getElementById('previewThumb');
+    const previewText = document.getElementById('previewText');
+
+    let selectedVibe = 'winning the Teen Patti table 🃏';
+    let selectedGuests = 1;
+    let selectedAmount = 800;
+    let attachedFile = null;
+
+    function buildWhatsAppMessage() {
+      const passLabel = selectedGuests === 1 ? '1 Pass' : `${selectedGuests} Passes`;
+      return `Hey Mugdha! ✨ I've just paid ₹${selectedAmount} (${passLabel}) via GPay/UPI for the Diwali Bash at Sparrow Villa on 5th Oct! I'm pulling up for ${selectedVibe}. Sharing my payment screenshot right here 📸🪔`;
+    }
+
+    function updateLinks() {
+      amountDisplay.textContent = selectedAmount.toLocaleString('en-IN');
+      btnAmountText.textContent = selectedAmount.toLocaleString('en-IN');
+
+      const upiUrl = `upi://pay?pa=mugdharoy2291@oksbi&pn=${encodeURIComponent('Mugdha Roy')}&am=${selectedAmount}&cu=INR&tn=${encodeURIComponent(`Diwali Bash 2026 (${selectedGuests} Pass)`)}`;
+      upiPayLink.href = upiUrl;
+
+      const msg = buildWhatsAppMessage();
+      whatsappBtn.href = `https://wa.me/916397056448?text=${encodeURIComponent(msg)}`;
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        chips.forEach((c) => c.classList.remove('active'));
+        chip.classList.add('active');
+        selectedVibe = chip.getAttribute('data-vibe');
+        updateLinks();
+      });
+    });
+
+    passBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        passBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedGuests = parseInt(btn.getAttribute('data-guests'), 10);
+        selectedAmount = parseInt(btn.getAttribute('data-amount'), 10);
+        updateLinks();
+      });
+    });
+
+    copyUpiBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('mugdharoy2291@oksbi');
+        copyUpiBtn.textContent = '✅ Copied!';
+        setTimeout(() => {
+          copyUpiBtn.textContent = '📋 Copy UPI ID';
+        }, 2200);
+      } catch {
+        const temp = document.createElement('input');
+        temp.value = 'mugdharoy2291@oksbi';
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        copyUpiBtn.textContent = '✅ Copied!';
+        setTimeout(() => {
+          copyUpiBtn.textContent = '📋 Copy UPI ID';
+        }, 2200);
+      }
+    });
+
+    screenshotInput.addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      attachedFile = file;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        previewThumb.src = ev.target.result;
+        previewText.textContent = `${file.name} ready to send! ✅`;
+        screenshotPreview.classList.add('visible');
+      };
+      reader.readAsDataURL(file);
+
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        whatsappHint.textContent = '📲 Screenshot attached! Tap the green button to share the image directly to WhatsApp.';
+      } else {
+        whatsappHint.textContent = '📸 Screenshot selected! Tap the green button to open Mugdha’s WhatsApp chat and drop the image in.';
+      }
+    });
+
+    whatsappBtn.addEventListener('click', async (e) => {
+      if (attachedFile && navigator.canShare && navigator.canShare({ files: [attachedFile] })) {
+        e.preventDefault();
+        try {
+          await navigator.share({
+            files: [attachedFile],
+            title: 'Diwali Bash 2026 Payment Screenshot',
+            text: buildWhatsAppMessage()
+          });
+        } catch (err) {
+          if (err.name !== 'AbortError') {
+            window.open(whatsappBtn.href, '_blank', 'noopener,noreferrer');
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
